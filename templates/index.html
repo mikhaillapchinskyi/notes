@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}This &amp; that {% endblock %}
+{% block content %}
+<div class="content">
+    <table border="1px">
+        <tr>
+            <th>Author</th>
+            <th>Name</th>
+            <th>Year</th>
+        </tr>
+        {% for i in books %}
+        <tr>
+            <td>{{i.author}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.year}}</td>
+        </tr>
+        {% endfor%}
+    </table>
+</div>
+
+
+{% endblock %}

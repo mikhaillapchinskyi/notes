@@ -1,5 +1,8 @@
-from django.http import HttpResponse
+from django.shortcuts import render
+from .models import Book
 
 
 def index(request):
-    return HttpResponse('Hello World. You are at the polls index.')
+    context = {'books': Book.objects.all()}
+    return render(request, 'index.html', context)
+
